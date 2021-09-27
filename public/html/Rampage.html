@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Siêu thú cuồng nộ | Phim HD không hay xóa web</title>
+    <link href="../css/detail.css" rel="stylesheet"/>
+    <link href="../images/logo/2018-07-31_20-13-43.png" rel="shortcut icon"/>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var r = document.getElementById("ranking");
+			if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {				
+				r.style.position="fixed";	
+				r.style.right="70px";	
+				r.style.top="40px";	
+				r.style.width="25%";
+				r.style.opacity="1";				
+				var f = document.getElementById("footerId");
+				if (document.documentElement.scrollTop + r.offsetHeight > f.offsetTop - 90) {
+					r.style.opacity="0";
+					r.style.transition="opacity .5s";
+				} 	
+			} else{
+				r.style.position="static";
+				r.style.width="100%";
+			}
+		}
+		$(document).ready(function(){
+			// hide #back-top first
+			$("#myBtn").hide();	
+			// fade in #back-top
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('#myBtn').fadeIn();
+					} else {
+						$('#myBtn').fadeOut();
+					}
+				});
+				// scroll body to 0px on click
+				$('#myBtn').click(function () {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 800);
+					return false;
+				});
+			});
+		});
+    </script>
+</head>
+
+<body>
+	<div class="container">
+  		<div class="header">
+            <img src="../images/logo/256-256-d908de4ed90c0a06d45e84e6fb8cd4f6.png" />
+            <a href="../index.html">
+                PHIMHAY.NET
+            </a>
+            <div class="search">
+                <input id="searchbox" type="text" placeholder="  Tìm kiếm phim ảnh, diễn viên,..."/>
+                <a href="#"><img src="../images/icon/magnifier.png"/></a>
+            </div>
+            <div class="login">	
+                <a href="Login.html" target="_blank">Đăng nhập</a>
+                <a href="Sign%20up.htmlml">Đăng ký</a>
+            </div>
+        </div> 
+     	<div class="menu">
+            <ul class="clearfix">
+                <li><a href="../index.html">Trang chủ <span class="caret"></span></a></li>
+                <li class="submenu">
+                    <a href="#">Thể loại <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="Hành%20động.htmlml" target="_blank">Phim hành động</a></li>
+                        <li><a href="#">Phim viễn tưởng</a></li>
+                        <li><a href="#">Phim hài hước</a></li>
+                        <li><a href="#">Phim hoạt hình</a></li>
+                        <li><a href="#">Phim kinh dị</a></li>                    
+                        <li><a href="#">Phim tình cảm</a></li>                   
+                        <li><a href="#">Phim tâm lý</a></li>
+                        <li><a href="#">Phim tài liệu</a></li>	               	                    
+                        <li><a href="#">Phim trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim lẻ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim lẻ 2018</a></li>
+                        <li><a href="#">Phim lẻ 2017</a></li>					
+                        <li><a href="#">Phim lẻ 2016</a></li>
+                        <li><a href="#">Phim lẻ 2015</a></li>                                        
+                        <li><a href="#">Phim lẻ 2014</a></li>     
+                        <li><a href="#">Phim lẻ trước 2014</a></li>                                      
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim bộ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim bộ Hàn Quốc</a></li>
+                        <li><a href="#">Phim bộ Nhật Bản</a></li>
+                        <li><a href="#">Phim bộ Đài Loan</a></li>					
+                        <li><a href="#">Phim bộ Trung Quốc</a></li>                                        
+                        <li><a href="#">Phim bộ Việt Nam</a></li>                        
+                        <li><a href="#">Phim bộ Ấn Độ</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="News.html">Tin tức <span class="caret"></span></a></li>                                         
+                <li><a href="Anime.html">Anime <span class="caret"></span></a></li>                                         
+            </ul>
+        </div>
+        <div class="body clearfix">
+        	<div class="left">            	
+                <div class="image">
+                	<img src="../images/movie-items/poster.thumb.jpg" alt="Rampage"/>
+                    <div class="ctrl">
+                        <button id="watch"><a href="#">Xem phim</a></button>                    
+                        <button><a href="#">Trailer</a></button>
+                        <button id="down"><a href="#">Download</a></button>
+                    </div>
+                </div>                 
+                <div class="movie-info">                      
+                	<span>RAMPAGE</span><br/>       
+               	    <span>Siêu thú cuồng nộ</span><br/>
+                    <dl>
+                        <dt>Trạng thái:<dt><dd>Hoàn tất</dd><br/>
+                        <dt>Điểm IMDb:</dt><dd>6.5</dd><br/>
+                        <dt>Đạo diễn:</dt><dd>Brad Peyton</dd><br/>
+                        <dt>Quốc gia:</dt><dd>Mỹ</dd><br/>
+                        <dt>Năm:</dt><dd><a href="#">2018</a></dd><br/>
+                        <dt>Ngày ra rạp:</dt><dd>20/04/2018</dd><br/>
+                        <dt>Thời lượng:</dt><dd>150 phút</dd><br/>
+                        <dt>Chất lượng:</dt><dd>Bản đẹp</dd><br/>
+                        <dt>Độ phân giải:</dt><dd>Full HD</dd><br/>
+                        <dt>Ngôn ngữ:</dt><dd>Phụ đề Việt + Thuyết minh</dd><br/>
+                        <dt>Thể loại:</dt><dd><a href="Hành%20động.htmlml">Hành động</a>, <a href="#">Viễn tưởng</a>, <a href="#">Hài hước</a></dd><br/>
+                        <dt>Công ty SX:</dt><dd>Flynn Picture Company, New Line Cinema, Twisted Media</dd><br/>
+                        <dt>Lượt xem:</dt><dd>101,034</dd><br/>
+                    </dl>                 
+                </div>
+                <h2>DIỄN VIÊN</h2>                
+                <div class="actor">
+                	<div class="actor-item">
+                    	<img src="../images/actors/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_.jpg"/>
+                        <div>Dwayne Johnson</div>
+                        <div>Davis Okoye</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/Naomie_Harris_2014.jpg"/>
+                        <div>Naomie Harris</div>
+                        <div>Dr. Kate Caldwell</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/malin-ackerman-attends-the-2018-african-childrens-choir-change-makers-gala-at-city-winery-on-february-1-2018-in-new-york-city-photo-by-mark-sagliocco_getty-images.jpg"/>
+                        <div>Malin Akerman</div>
+                        <div>Claire Wyden</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/d23beaba4b45ccb9361ce07867074ef3.jpg"/>
+                        <div>Jeffrey Dean</div>
+                        <div>Harvey Russell</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/JAKELACY.jpg"/>
+                        <div>Jake Lacy</div>
+                        <div>Brett Wyden</div>                        
+                    </div>                
+                	<div class="actor-item">
+                    	<img src="../images/actors/MV5BNmI1OTNmNWQtODEzYy00ZWZhLTgxNTMtZDRhMDc3ZGMzNzgxXkEyXkFqcGdeQXVyMTA2MTE2MA@@._V1_UY317_CR174,0,214,317_AL_.jpg"/>
+                        <div>P.J. Byrne</div>
+                        <div>Nelson</div>                        
+                    </div>
+                    <div class="actor-item">
+                    	<img src="../images/actors/tải xuống.jpg"/>
+                        <div>Demetrius Grosse</div>
+                        <div>Colonel Blake</div>                        
+                    </div>
+                </div>
+                <h2>NỘI DUNG</h2>
+                <div class="summary">
+              		Bộ phim kể về nhà sinh vật học Davis Okoye có mối liên kết khăng khít với George - một chú gorilla lưng bạc được anh chăm sóc từ nhỏ. Một thí nghiệm đột biến ngoài ý muốn đã làm biến đổi gorilla thành quái vật khổng lồ hung hăng. Gorilla cùng những sinh vật bị biến đổi khác đã tấn công con người và đẩy nhân loại đứng trước hiểm họa diệt vong. Liệu Davis Okoye sẽ làm gì để giành chiến thắng, không chỉ để ngăn chặn một thảm họa toàn cầu, mà còn để cứu gorilla đã từng là bạn tốt của mình?
+                    <img src="../images/chi tiết/rampage-2018-movie-10k-poster-2m-2880x1800-e1523858315356.jpg"/>
+              </div>              
+                <h2>BÌNH LUẬN</h2>
+                <div class="comment">
+					<img src="../images/icon/user-2517433_960_720.png" alt="user"/>
+                	<textarea placeholder="Thêm bình luận..."></textarea>                
+                    <button>Đăng</button>
+	            </div>
+                 <button id="myBtn" title="Go to top">&Lambda;</button>
+            </div>
+            <div class="right">
+            	<div id="ranking">      	         
+                    <ul class="clearfix">          	
+                        <li>&hearts;  PHIM HOT TRONG NGÀY  &hearts;</li>
+                        <li><a href="Avg3.html">
+                            <img src="../images/movie-items/poster.thumb (4).jpg"/>
+                            <span class="movie-name">Cuộc chiến vô cực</span><br/>                    
+                            <span class="movie-view">Lượt xem: 200,069</span>
+                       </a></li> 
+                        <li><a href="BP.html">
+                            <img src="../images/movie-items/poster.thumb (7).jpg"/>                    
+                            <span class="movie-name">Báo đen</span><br/>	               
+                            <span class="movie-view">Lượt xem: 169,000</span>                
+                        </a></li>
+                        <li><a href="DP2.html">
+                            <img src="../images/movie-items/poster.thumb (3).jpg"/>                   
+                            <span class="movie-name">Deadpool 2</span><br/>                                        
+                            <span class="movie-view">Lượt xem: 125,070</span>                   
+                        </a></li>
+                        <li><a href="Rampage.html">
+                            <img src="../images/movie-items/poster.thumb.jpg"/>                    
+                            <span class="movie-name">Siêu thú cuồng nộ</span><br/>                                        
+                            <span class="movie-view">Lượt xem: 101,034</span>                
+                        </a></li>
+                        <li><a href="RP1.html">
+                            <img src="../images/movie-items/poster.thumb (2).jpg"/>        
+                            <span class="movie-name">Đấu trường ảo</span><br/>
+                            <span class="movie-view">Lượt xem: 95,002</span>                   
+                        </a></li>
+                        <li><a href="InCredible.html">
+                            <img src="../images/movie-items/poster.thumb (9).jpg"/>                 
+                            <span class="movie-name">Gia đình siêu nhân 2</span><br/>
+                            <span class="movie-view">Lượt xem: 80,086</span>                 
+                        </a></li>
+                        <li><a href="#">
+                            <img src="../images/movie-items/poster.thumb (6).jpg"/>                
+                            <span class="movie-name">Vành đai Thái Bình Dương 2</span><br/>
+                            <span class="movie-view">Lượt xem: 62,000</span>                   
+                        </a></li>
+                    </ul>
+            	</div>
+            </div>
+        </div>        
+        <div class="footer clearfix" id="footerId">
+    	<div class="footer-name"><a href="../index.html">PHIMHAY.NET</a></div>
+        <div>
+        	<ul>
+            	<li><a href="#">Hỏi đáp - Hướng dẫn</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Nguyên tắc cộng đồng</a></li>
+                <li><a href="#">Liên hệ quảng cáo</a></li>
+                <li class="bla">Copyright &copy; 2018 Phimhay.net. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Đăng ký</title>
+    <link href="../Css/css-signup.css" rel="stylesheet"/>
+    <link href="../images/logo/2018-07-31_20-13-43.png" rel="shortcut icon"/>
+	<script>
+		function checkform(){
+			if(document.getElementById("account").value=="" || document.getElementById("password").value=="" || document.getElementById("password-xn").value=="" || document.getElementById("email").value=="" || document.getElementById("sdt").value=="")
+			{
+				alert("Bạn phải điền vào những ô có dấu (*)");
+				document.getElementById("agree").checked="";
+			}else{
+				if(document.getElementById("password").value !=	document.getElementById("password-xn").value)
+				{
+					alert("Mật khẩu xác nhận không trùng nhau !");
+					document.getElementById("agree").checked="";
+				}
+			}			
+		}
+	</script>
+</head>
+
+<body>
+	<div class="container">
+  		<div class="header">
+            <img src="../images/logo/256-256-d908de4ed90c0a06d45e84e6fb8cd4f6.png" />
+            <a href="../index.html">
+                PHIMHAY.NET
+            </a>
+            <div class="search">
+                <input id="searchbox" type="text" placeholder="  Tìm kiếm phim ảnh, diễn viên,..."/>
+                <a href="#"><img src="../images/icon/magnifier.png"/></a>
+            </div>
+            <div class="login">	
+                <a href="Login.html" target="_blank">Đăng nhập</a>
+                <a href="Sign up.html">Đăng ký</a>                       
+            </div>
+        </div> 
+     	<div class="menu">
+            <ul class="clearfix">
+                <li><a href="../index.html">Trang chủ <span class="caret"></span></a></li>
+                <li class="submenu">
+                    <a href="#">Thể loại <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="Hành%20động.htmlml" target="_blank">Phim hành động</a></li>
+                        <li><a href="#">Phim viễn tưởng</a></li>
+                        <li><a href="#">Phim hài hước</a></li>
+                        <li><a href="#">Phim hoạt hình</a></li>
+                        <li><a href="#">Phim kinh dị</a></li>                    
+                        <li><a href="#">Phim tình cảm</a></li>                   
+                        <li><a href="#">Phim tâm lý</a></li>
+                        <li><a href="#">Phim tài liệu</a></li>	               	                    
+                        <li><a href="#">Phim trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim lẻ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim lẻ 2018</a></li>
+                        <li><a href="#">Phim lẻ 2017</a></li>					
+                        <li><a href="#">Phim lẻ 2016</a></li>
+                        <li><a href="#">Phim lẻ 2015</a></li>                                        
+                        <li><a href="#">Phim lẻ 2014</a></li>     
+                        <li><a href="#">Phim lẻ trước 2014</a></li>                                      
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim bộ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim bộ Hàn Quốc</a></li>
+                        <li><a href="#">Phim bộ Nhật Bản</a></li>
+                        <li><a href="#">Phim bộ Đài Loan</a></li>					
+                        <li><a href="#">Phim bộ Trung Quốc</a></li>                                        
+                        <li><a href="#">Phim bộ Việt Nam</a></li>                        
+                        <li><a href="#">Phim bộ Ấn Độ</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="News.html">Tin tức <span class="caret"></span></a></li>                                         
+                <li><a href="Anime.html">Anime <span class="caret"></span></a></li>                                         
+            </ul>
+        </div>
+        <div class="body clearfix">
+       
+        	<div class="title">ĐĂNG KÝ</div> 
+            <form id="signup" onSubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Bạn phải đồng ý với Chính sách bảo mật và Điều khoản sử dụng thì mới đăng ký tài khoản được !'); return false; }">
+                <div class="acc"><b>Tên tài khoản:</b><input id="account" type="text"/>(*)</div>
+                <div class="pass"><b>Mật khẩu:</b><input id="password" type="password"/>(*)</div>
+                <div class="pass-xn"><b>Xác nhận mật khẩu:</b><input id="password-xn" type="password"/>(*)</div>
+                <div class="private">            
+                    <b>Ngày sinh:</b><input type="date" id="birth"/>
+                    <b>Giới tính:</b><input type="radio" name="sex"/>Nam<input type="radio" name="sex"/>Nữ
+                </div>   
+                <div class="email"><b>Email:</b><input type="email" id="email"/>(*)</div>
+                <div class="sdt"><b>Số điện thoại:</b><input type="tel" id="sdt"/>(*)</div>
+                <div class="country"><b>Quốc tịch:</b><select id="country"><option>Việt Nam</option><option>Mỹ</option><option>Nhật Bản</option><option>Trung Quốc</option><option>Khác...</option></select></div>                
+				<input type="checkbox" name="checkbox" value="check" id="agree" onClick="checkform()"/> Tôi đã đọc và đồng ý với Chính sách bảo mật và Điều khoản sử dụng.
+                <button class="button-login" type="submit">Đăng ký</button>            
+                <div class="lisence"><a href="#">Điều khoản sử dụng</a> | <a href="#">Chính sách bảo mật</a></div>
+			</form>
+        </div>        
+        <div class="footer clearfix">
+    	<div class="footer-name"><a href="../index.html">PHIMHAY.NET</a></div>
+        <div>
+        	<ul>
+            	<li><a href="#">Hỏi đáp - Hướng dẫn</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Nguyên tắc cộng đồng</a></li>
+                <li><a href="#">Liên hệ quảng cáo</a></li>
+                <li class="bla">Copyright &copy; 2018 Phimhay.net. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

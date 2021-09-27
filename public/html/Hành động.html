@@ -1,0 +1,476 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="../images/logo/2018-07-31_20-13-43.png" rel="shortcut icon"/>
+	<title>Phim hành động | Phim HD không hay xóa web</title>
+    <link href="../Css/css-hanhdong.css" rel="stylesheet"/>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script>
+		function showPage(pageId,btn){
+			$(".body").find(".movie-list").css("display","none");		
+			var p = $(document.getElementById(pageId));
+			p.css("display","block");
+			$(".body").find(".pagebtn").css("background-color","#CCC");
+			$(".body").find(".pagebtn").css("color","#000");
+			$(btn).css("background-color","red")
+			$(btn).css("color","white")
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+		}
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var r = document.getElementById("ranking");
+			if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {				
+				r.style.position="fixed";	
+				r.style.right="46px";	
+				r.style.top="40px";	
+				r.style.width="25%";
+				r.style.opacity="1";				
+				var f = document.getElementById("footerId");
+				if (document.documentElement.scrollTop + r.offsetHeight > f.offsetTop - 100) {
+					r.style.opacity="0";
+					r.style.transition="opacity .5s";
+				} 	
+			} else{
+				r.style.position="static";
+				r.style.width="100%";
+			}
+		}
+		$(document).ready(function(){
+			// hide #back-top first
+			$("#myBtn").hide();	
+			// fade in #back-top
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('#myBtn').fadeIn();
+					} else {
+						$('#myBtn').fadeOut();
+					}
+				});
+				// scroll body to 0px on click
+				$('#myBtn').click(function () {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 800);
+					return false;
+				});
+			});
+		});
+    </script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+    	<img src="../images/logo/256-256-d908de4ed90c0a06d45e84e6fb8cd4f6.png" />
+    	<a href="../index.html">
+        	PHIMHAY.NET
+        </a>
+      	<div class="search">
+      		<input id="searchbox" type="text" placeholder="  Tìm kiếm phim ảnh, diễn viên,..."/>
+			<a href="#"><img src="../images/icon/magnifier.png"/></a>
+        </div>
+        <div class="login">	
+            <a href="Login.html" target="_blank">Đăng nhập</a>
+           	<a href="Sign%20up.htmlml" target="_blank">Đăng ký</a>
+        </div>
+   	</div> 
+    <div class="menu">
+	    <ul class="clearfix">
+        	<li><a href="#">Trang chủ <span class="caret"></span></a></li>
+        	<li class="submenu">
+            	<a href="#">Thể loại <span class="caret"></span></a>
+                <ul class="subcontent">
+                	<li><a href="Hành động.html">Phim hành động</a></li>
+                	<li><a href="#">Phim viễn tưởng</a></li>
+               		<li><a href="#">Phim hài hước</a></li>
+                    <li><a href="#">Phim hoạt hình</a></li>
+	               	<li><a href="#">Phim kinh dị</a></li>                    
+	               	<li><a href="#">Phim tình cảm</a></li>                   
+	               	<li><a href="#">Phim tâm lý</a></li>
+	               	<li><a href="#">Phim tài liệu</a></li>	               	                    
+                    <li><a href="#">Phim trinh thám</a></li>
+            	</ul>
+            </li>
+        	<li class="submenu">
+            	<a href="#">Phim lẻ <span class="caret"></span></a>
+                <ul class="subcontent">
+                	<li><a href="#">Phim lẻ 2018</a></li>
+					<li><a href="#">Phim lẻ 2017</a></li>					
+					<li><a href="#">Phim lẻ 2016</a></li>
+					<li><a href="#">Phim lẻ 2015</a></li>                                        
+                    <li><a href="#">Phim lẻ 2014</a></li>     
+					<li><a href="#">Phim lẻ trước 2014</a></li>                                      
+                </ul>
+            </li>
+        	<li class="submenu">
+            	<a href="#">Phim bộ <span class="caret"></span></a>
+                <ul class="subcontent">
+                	<li><a href="#">Phim bộ Hàn Quốc</a></li>
+                    <li><a href="#">Phim bộ Nhật Bản</a></li>
+					<li><a href="#">Phim bộ Đài Loan</a></li>					
+					<li><a href="#">Phim bộ Trung Quốc</a></li>                                        
+                    <li><a href="#">Phim bộ Việt Nam</a></li>                        
+                    <li><a href="#">Phim bộ Ấn Độ</a></li>                        
+            	</ul>
+            </li>
+        	<li><a href="News.html">Tin tức <span class="caret"></span></a></li>                                         
+            <li><a href="Anime.html">Anime <span class="caret"></span></a></li>                                         
+        </ul>
+	</div>
+    <div class="body">
+    	<div class="filter clearfix">
+            <div>Thể loại:
+            <select>
+            	<option>Tất cả</option>
+                <option selected>Phim hành động</option>
+                <option>Phim viễn tưởng</option>
+                <option>Phim tình cảm</option>>
+                <option>Phim hài hước</option>
+                <option>Phim kinh dị</option>
+                <option>Phim tâm lý</option>
+                <option>Phim tài liệu</option>
+                <option>Phim trinh thám</option>
+            </select>
+            </div>
+            <div>Quốc gia:
+            <select>
+            	<option>Tất cả</option>
+                <option>Việt Nam</option>                
+            	<option>Mỹ</option>
+                <option>Trung Quốc</option>
+                <option>Hàn Quốc</option>>
+                <option>Nhật Bản</option>
+                <option>Thái Lan</option>    
+                <option>Ấn Độ</option>     
+            </select> 
+            </div>
+            <div>Năm phát hành:
+            <select>
+            	<option>Tất cả</option>
+            	<option>Năm 2018</option>
+                <option>Năm 2017</option>
+                <option>Năm 2016</option>>
+                <option>Năm 2015</option>
+                <option>Năm 2014</option>
+                <option>Trước 2014</option>              
+            </select>
+            </div>        
+			<div><input type="button" value="Lọc phim"/></div>
+        </div>
+        <div class="left">
+        	<h2>PHIM HÀNH ĐỘNG</h2>
+            <ul class="movie-list clearfix" id="page1">
+            	<li class="movie-item">
+                	<a href="InCredible.html">
+                    	<img src="../images/movie-items/poster.thumb (9).jpg" title="Gia đình siêu nhân 2"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">CAM-Vietsub</span>    
+                        <div class="info">
+	                        <div>GIA ĐÌNH SIÊU NHÂN 2</div>
+                            <span>118 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+            	<li class="movie-item">
+                    <a href="Rampage.html">
+                        <img src="../images/movie-items/poster.thumb.jpg" title="Siêu thú cuồng nộ"/>  
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>                        
+                        <div class="info">
+                        	<div>SIÊU THÚ CUỒNG NỘ</div>
+                            <span>107 phút</span>
+                        </div>                                                                              
+                    </a>                       
+                </li>
+                <li class="movie-item">
+                    <a href="#">
+                        <img src="../images/movie-items/12345.jpg" title="Thế giới khủng long"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">CAM-Vietsub</span>    
+                        <div class="info">
+                            <div>THẾ GIỚI KHỦNG LONG</div>
+                            <span>128 phút</span>
+                      	</div>                       
+                    </a>                    
+                </li>
+                <li class="movie-item">
+                	<a href="RP1.html">
+                    	<img src="../images/movie-items/poster.thumb (2).jpg" title="Đấu trường ảo"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>ĐẤU TRƯỜNG ẢO</div>
+                            <span>140 phút</span>
+	                 	</div>
+                    </a>
+               	</li>
+                 <li class="movie-item">
+                	<a href="DP2.html">
+                    	<img src="../images/movie-items/poster.thumb (3).jpg" title="Deadpool 2"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>DEADPOOL 2</div>
+                            <span>119 phút</span>
+                      	</div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="Avg3.html">
+                    	<img src="../images/movie-items/poster.thumb (4).jpg" title="Cuộc chiến vô cực"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>CUỘC CHIẾN VÔ CỰC</div>
+                            <span>150 phút</span>
+      	                </div>
+                    </a>
+               	</li>
+                 <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (5).jpg" title="Cướp mộ"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>CƯỚP MỘ</div>
+                            <span>118 phút</span>
+	      	            </div>
+                    </a>
+               	</li>
+                 <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (6).jpg" title="Vành đai Thái Bình Dương 2"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>VÀNH ĐAI THÁI BÌNH DƯƠNG 2</div>
+                            <span>111 phút</span>
+                       	</div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="BP.html">
+                    	<img src="../images/movie-items/poster.thumb (7).jpg" title="Báo đen"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>BÁO ĐEN</div>
+                            <span>134 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (8).jpg" title="Giải mã mê cung 3"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>GIẢI MÃ MÊ CUNG 3</div>
+                            <span>141 phút</span>
+	 	                </div>
+                    </a>
+               	</li>                
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (10).jpg" title="Chú thỏ Peter"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>CHÚ THỎ PETER</div>
+                            <span>95 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (11).jpg" title="Jumanji"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>JUMANJI</div>
+                            <span>119 phút</span>
+	   	                </div>
+                    </a>
+               	</li>                           
+            </ul>
+            <ul class="movie-list clearfix" id="page2">
+            	<li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (12).jpg" title="Ghost in the Shell"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>VỎ BỌC MA</div>
+                            <span>107 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (13).jpg" title="Justice Leauge"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>LIÊN MINH CÔNG LÝ</div>
+                            <span>120 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (14).jpg" title="Chasing the Dragon"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>TRÙM HƯƠNG CẢNG</div>
+                            <span>128 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/123.jpg" title="Thor: Ragnarok"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>THOR: TẬN THẾ RAGNAROK</div>
+                            <span>130 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.thumb (1)2.jpg" title="Captain America: Civil War"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>CAPTAIN AMERICA: NỘI CHIẾN</div>
+                            <span>147 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/e5cfea7cf13764c3d338f79c564d28ce.jpg" title="Transformer 5: The Last Knight"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>TRANSFORMER 5: KỊ SĨ CUỐI...</div>
+                            <span>149 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/4.jpg" title="Kingman: The Golden Circle"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>KINGMAN: TỔ CHỨC HOÀNG...</div>
+                            <span>130 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/9.jpg" title="Big Hero 6"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>BIỆT ĐỘI BIG HERO 6</div>
+                            <span>108 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/15.jpg" title="Wonder Woman"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>WONDER WOMAN</div>
+                            <span>141 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/14.jpg" title="The Hunger Game: Mockingjay Part 1"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">HD-Vietsub</span>    
+                        <div class="info">
+	                        <div>THE HUNGER GAME: HÚNG...</div>
+                            <span>123 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+			</ul>               
+            <div class="control">            
+                <button class="pagebtn" id="btn1" onClick="showPage('page1',this)">1</button>
+                <button class="pagebtn" id="btn2" onClick="showPage('page2',this)">2</button>          
+            </div>
+            <button id="myBtn" title="Go to top">&Lambda;</button>          
+        </div>
+        <div class="right">  
+        	<div id="ranking">      	         
+        	<ul class="clearfix">          	
+            	<li>&hearts;  PHIM HOT TRONG NGÀY  &hearts;</li>
+            	<li><a href="Avg3.html">
+                	<img src="../images/movie-items/poster.thumb (4).jpg"/>
+                    <span class="movie-name">Cuộc chiến vô cực</span><br/>                    
+                    <span class="movie-view">Lượt xem: 200,069</span>
+               </a></li> 
+                <li><a href="BP.html">
+                	<img src="../images/movie-items/poster.thumb (7).jpg"/>                    
+                    <span class="movie-name">Báo đen</span><br/>	               
+                    <span class="movie-view">Lượt xem: 169,000</span>                
+                </a></li>
+                <li><a href="DP2.html">
+                	<img src="../images/movie-items/poster.thumb (3).jpg"/>                   
+                    <span class="movie-name">Deadpool 2</span><br/>                                        
+                    <span class="movie-view">Lượt xem: 125,070</span>                   
+                </a></li>
+                <li><a href="Rampage.html">
+               		<img src="../images/movie-items/poster.thumb.jpg"/>                    
+                    <span class="movie-name">Siêu thú cuồng nộ</span><br/>                                        
+                    <span class="movie-view">Lượt xem: 101,034</span>                
+                </a></li>
+                <li><a href="RP1.html">
+                	<img src="../images/movie-items/poster.thumb (2).jpg"/>        
+                    <span class="movie-name">Đấu trường ảo</span><br/>
+                    <span class="movie-view">Lượt xem: 95,002</span>                   
+                </a></li>
+                <li><a href="InCredible.html">
+                	<img src="../images/movie-items/poster.thumb (9).jpg"/>                 
+                    <span class="movie-name">Gia đình siêu nhân 2</span><br/>
+                    <span class="movie-view">Lượt xem: 80,086</span>                 
+                </a></li>
+                <li><a href="#">
+                	<img src="../images/movie-items/poster.thumb (6).jpg"/>                
+                    <span class="movie-name">Vành đai Thái Bình Dương 2</span><br/>
+                    <span class="movie-view">Lượt xem: 62,000</span>                   
+                </a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix" id="footerId">
+    	<div class="footer-name"><a href="../index.html">PHIMHAY.NET</a></div>
+        <div>
+        	<ul>
+            	<li><a href="#">Hỏi đáp - Hướng dẫn</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Nguyên tắc cộng đồng</a></li>
+                <li><a href="#">Liên hệ quảng cáo</a></li>
+                <li class="bla">Copyright &copy; 2018 Phimhay.net. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

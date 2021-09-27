@@ -1,0 +1,383 @@
+@charset "utf-8";
+body {
+	background-image:url(../images/background/simple_blue__black_wallpaper-wallpaper-1920x1080.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right top;
+}
+button:focus{
+	outline:none;
+}
+input:focus{
+	outline:none;
+}
+a {
+	text-decoration:none;
+	color:#FFF;
+}
+div.container{
+	font-family:Arial;
+}
+.clearfix{
+	overflow:hidden;
+}
+/* CSS HEADER */
+body {
+	margin:0;
+}
+div.header {
+	height:70px;
+}
+div.header > img{
+	float:left;
+	margin:7px 0 0 7px;
+	width:55px;
+}
+div.header > a{	
+	display:inline-block;
+	font-size:36px;
+	font-family:Sansation;
+	font-weight:bold;
+	text-decoration:none;
+	color:#FFF;
+	margin: 14px;	
+	height:70px;
+	text-shadow: 2px 2px 3px #111;
+}
+div.header > div.search{
+	float:right;
+	height:30px;
+	margin:16px;	
+}
+div.header > div.search > a > img{
+	width:25px;
+	margin-top:7px;
+	margin-left:5px;
+
+}
+div.header > div.search > #searchbox {
+	width:260px;
+	height:30px;
+	border-radius:15px;
+	display:block;
+	float:left;
+	text-indent: 20px;
+}
+div.header > div.login{
+	float:right;
+	margin-top: 27px;
+	margin-right:10px;
+}
+div.header > div.login > a{
+	margin:5px;	
+	padding:10px;
+	color:#FFF;
+	text-decoration:none;
+	font-weight:bold;
+	border:1px solid #FFF;
+	border-radius:10px;
+	background:linear-gradient(#666,#000);
+}
+div.header > div.login > a:hover {
+	background:#000;
+	color:#3c6;
+}
+
+/* CSS MENU */
+ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+div.menu > ul{
+	background:linear-gradient(#111,#666,#111);
+}
+div.menu > ul > li{
+	float:left;
+	min-height:20px;
+	min-width:150px;
+	border-right:1px solid #666;
+	text-align:center;
+	font-weight:bold;
+	}
+div.menu > ul > li:last-child{
+	border:none;
+
+}
+div.menu > ul > li > a , ul.subcontent > li > a{
+	text-decoration:none;
+	color:#FFF;		
+	padding:10px 15px;
+	display:block;
+}
+div.menu > ul > li:hover{
+	background:linear-gradient(#000,#333,#000);;
+}
+div.menu > ul > li:hover > a{
+	color:#3C6;
+}
+ul.subcontent{
+	background-color:#111;
+	column-count:3;
+	border-bottom:2px solid #3C6;
+}
+ul.subcontent > li{
+	text-align:left;
+}
+ul.subcontent > li:hover > a{
+	color:#3C6;
+}
+ul.subcontent {
+	visibility:hidden;
+	position:absolute;
+	opacity:0;
+	transition:visibility 1s, opacity .5s;
+	z-index:99;
+}
+li.submenu:hover ul.subcontent {
+	visibility:visible;
+	opacity:1;
+}
+/*CSS BODY*/
+div.news-list{
+	padding:50px;
+	padding-bottom:0px;
+	border-top:1px solid #CCC;
+	display:none;
+}
+div#page1{
+	display:block;
+}
+div.news-list > h2{
+	color:white;
+	text-align:center;
+	text-shadow:2px 2px 3px #F00;
+	font-size:30px;
+	margin-top:0;
+	text-transform:uppercase;
+}
+div.news-list > div.news-item{
+	width: 30%;
+	display:inline-block;
+	margin-left:15px;
+	margin-right:15px;
+	margin-bottom:40px;	
+}
+div.news-list > div.news-item:hover a .news-info{
+	height:30%;
+}
+div.news-list > div.news-item{
+	position:relative;
+}
+div.news-list > div.news-item > a > div.news-info{	
+	position:absolute;
+	bottom:45px;
+	left:0;
+	right:0;
+	background-color:rgba(255,0,0,0.6);
+	overflow: hidden;
+	width:100%;
+	height:0;
+	transition: .5s ease;
+}
+div.news-list > div.news-item > a > div.news-info > div.text{
+	white-space: nowrap; 
+	color:#FFF;
+	font-size: 16px;
+	position: absolute;
+	overflow: hidden;
+	top:50%;
+	left:50%;
+	height:100%;
+	transform: translate(-50%, -50%);
+	padding:10px;	
+	padding-top:30px;	
+	text-align:center;
+}
+div.news-list > div.news-item > a > img{
+	width:100%;	
+	height:250px;	
+}
+div.news-list > div.news-item > a > div.news-title{
+	font-weight:bold;
+	font-size:18px;
+}
+div.news-list > div.news-item > a > div.news-title:hover{
+	color:#FF0;
+}
+div.control {
+	margin: 0 700px;
+	margin-bottom:30px;
+}
+div.control > button {
+	border-radius:50%;
+	border:none;
+	padding-left:13px;
+	padding-right:13px;
+	line-height:30px;
+	max-width:40px;
+	max-height:40px;
+	cursor:pointer;
+	margin-left:5px;
+	font-weight:bold;
+	box-shadow:2px 2px 3px #000;
+}
+div.control > button:first-child{
+	background-color:#F00;
+	color:white;
+}
+/*BACK TO TOP*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px; 
+    z-index: 99; 
+    border: none;
+    outline: none;
+    color: white; 
+    cursor: pointer;
+    padding:18px 15px; 
+    border-radius: 50%;
+    font-size: 20px; 
+	width: 4%;
+	background-color:#F00;
+	font-weight:bold;
+	box-shadow:2px 2px 3px #000;	
+	text-align:center;
+}
+#myBtn:hover{
+	background-color:#900;
+}
+/*CSS FOOTER*/
+
+div.footer{
+	clear:both;
+	height:30px;
+	background-color:#333;
+	padding:30px 22px;
+	margin-top:30px;
+	border-top:solid 2px white;
+}
+div.footer > div.footer-name{
+	font-size:36px;
+	font-weight:bold;
+	font-family:Sansation;
+	color:#999;
+	padding-bottom:20px;
+	float:left;
+}	
+div.footer > div > ul {
+	padding:10px;
+}
+div.footer > div > ul li {
+	float:left;
+	color:#999;
+	padding: 0 45px 0 45px;
+}
+div.footer > div > ul > li:first-child{
+	padding-left:60px;
+}
+div.footer > div > ul > li:last-child{
+	border:none;	
+}
+div.footer > div > ul > li > a:hover{
+	color:#3c6;
+}
+li.bla{
+	margin-left:-300px;
+	font-size:13px;
+	}
+div.footer-name{
+	margin-top:-15px;
+	}
+
+/*CSS ANIMATION*/
+div.mySlides > a > img
+{
+	height: 600px;
+	width: 100%;
+	border-radius:10px;
+}
+.slideshow-container {
+	max-width: 1450px;
+	position: relative;
+	margin: 20px auto;
+	margin-bottom:0;
+}
+.mySlides {
+    display: none;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+.mySlides .text {
+	color: #FFF;
+	height:40px;
+	font-size:30px;
+	padding: 8px 0 8px 0;
+	position: absolute;
+	bottom: 4px;
+	width: 100%;
+	text-align: center;
+	background:rgba(0,0,0,0.75);
+	font-size:30px;
+	border-radius:0 0 10px 10px;
+}
+.dot {
+	cursor:pointer;
+	height: 13px;
+	width: 13px;
+	margin: 0 2px 20px 0;
+	background-color:#999;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+	background-color:#FFF;
+}
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {display: block;} 
+	to {margin: 0;}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+
+/*Ki hieu mui ten ben canh menu*/
+.caret {
+    display: inline-block;
+    width:0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}

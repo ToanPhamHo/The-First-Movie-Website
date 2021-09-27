@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Đấu trường ảo | Phim HD không hay xóa web</title>
+    <link href="../css/detail.css" rel="stylesheet"/>
+    <link href="../images/logo/2018-07-31_20-13-43.png" rel="shortcut icon"/>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var r = document.getElementById("ranking");
+			if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {				
+				r.style.position="fixed";	
+				r.style.right="70px";	
+				r.style.top="40px";	
+				r.style.width="25%";
+				r.style.opacity="1";				
+				var f = document.getElementById("footerId");
+				if (document.documentElement.scrollTop + r.offsetHeight > f.offsetTop - 90) {
+					r.style.opacity="0";
+					r.style.transition="opacity .5s";
+				} 	
+			} else{
+				r.style.position="static";
+				r.style.width="100%";
+			}
+		}
+		$(document).ready(function(){
+			// hide #back-top first
+			$("#myBtn").hide();	
+			// fade in #back-top
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('#myBtn').fadeIn();
+					} else {
+						$('#myBtn').fadeOut();
+					}
+				});
+				// scroll body to 0px on click
+				$('#myBtn').click(function () {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 800);
+					return false;
+				});
+			});
+		});
+    </script>
+</head>
+
+<body>
+	<div class="container">
+  		<div class="header">
+            <img src="../images/logo/256-256-d908de4ed90c0a06d45e84e6fb8cd4f6.png" />
+            <a href="../index.html">
+                PHIMHAY.NET
+            </a>
+            <div class="search">
+                <input id="searchbox" type="text" placeholder="  Tìm kiếm phim ảnh, diễn viên,..."/>
+                <a href="#"><img src="../images/icon/magnifier.png"/></a>
+            </div>
+            <div class="login">	
+                <a href="Login.html" target="_blank">Đăng nhập</a>
+                <a href="Sign%20up.htmlml" target="_blank">Đăng ký</a>
+            </div>
+        </div> 
+     	<div class="menu">
+            <ul class="clearfix">
+                <li><a href="../index.html">Trang chủ <span class="caret"></span></a></li>
+                <li class="submenu">
+                    <a href="#">Thể loại <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="Hành%20động.htmlml" target="_blank">Phim hành động</a></li>
+                        <li><a href="#">Phim viễn tưởng</a></li>
+                        <li><a href="#">Phim hài hước</a></li>
+                        <li><a href="#">Phim hoạt hình</a></li>
+                        <li><a href="#">Phim kinh dị</a></li>                    
+                        <li><a href="#">Phim tình cảm</a></li>                   
+                        <li><a href="#">Phim tâm lý</a></li>
+                        <li><a href="#">Phim tài liệu</a></li>	               	                    
+                        <li><a href="#">Phim trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim lẻ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim lẻ 2018</a></li>
+                        <li><a href="#">Phim lẻ 2017</a></li>					
+                        <li><a href="#">Phim lẻ 2016</a></li>
+                        <li><a href="#">Phim lẻ 2015</a></li>                                        
+                        <li><a href="#">Phim lẻ 2014</a></li>     
+                        <li><a href="#">Phim lẻ trước 2014</a></li>                                      
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim bộ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim bộ Hàn Quốc</a></li>
+                        <li><a href="#">Phim bộ Nhật Bản</a></li>
+                        <li><a href="#">Phim bộ Đài Loan</a></li>					
+                        <li><a href="#">Phim bộ Trung Quốc</a></li>                                        
+                        <li><a href="#">Phim bộ Việt Nam</a></li>                        
+                        <li><a href="#">Phim bộ Ấn Độ</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="News.html">Tin tức <span class="caret"></span></a></li>                                         
+                <li><a href="Anime.html">Anime <span class="caret"></span></a></li>                                         
+            </ul>
+        </div>
+        <div class="body clearfix">
+        	<div class="left">            	
+                <div class="image">
+                	<img src="../images/movie-items/poster.thumb (2).jpg" alt="Đấu trường ảo"/>
+                    <div class="ctrl">
+                        <button id="watch"><a href="#">Xem phim</a></button>                    
+                        <button><a href="#">Trailer</a></button>
+                        <button id="down"><a href="#">Download</a></button>
+                    </div>
+                </div>                 
+                <div class="movie-info">                      
+                	<span>Ready Player One</span><br/>       
+               	    <span>Đấu trường ảo</span><br/>
+                    <dl>
+                        <dt>Trạng thái:<dt><dd>Hoàn tất</dd><br/>
+                        <dt>Điểm IMDb:</dt><dd>7.8</dd><br/>
+                        <dt>Đạo diễn:</dt><dd>Steven Spielberg</dd><br/>
+                        <dt>Quốc gia:</dt><dd>Mỹ</dd><br/>
+                        <dt>Năm:</dt><dd><a href="#">2018</a></dd><br/>
+                        <dt>Ngày ra rạp:</dt><dd>30/03/2018</dd><br/>
+                        <dt>Thời lượng:</dt><dd>140 phút</dd><br/>
+                        <dt>Chất lượng:</dt><dd>Bản đẹp</dd><br/>
+                        <dt>Độ phân giải:</dt><dd>Full HD</dd><br/>
+                        <dt>Ngôn ngữ:</dt><dd>Phụ đề Việt + Thuyết minh</dd><br/>
+                        <dt>Thể loại:</dt><dd><a href="Hành%20động.htmlml">Hành động</a>, <a href="#">Viễn tưởng</a></dd><br/>
+                        <dt>Công ty SX:</dt><dd>Amblin Entertainment, De Line Pictures, Dune Entertainment</dd><br/>
+                        <dt>Lượt xem:</dt><dd>95,002</dd><br/>
+                    </dl>                 
+                </div>
+                <h2>DIỄN VIÊN</h2>                
+                <div class="actor">
+                	<div class="actor-item">
+                    	<img src="../images/actors/23.jpg"/>
+                        <div>Tye Sheridan</div>
+                        <div>Parzival</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/MV5BMjIxNDUzMTQ4OF5BMl5BanBnXkFtZTgwNjU3MjI1MTE@._V1_UY317_CR0,0,214,317_AL_.jpg"/>
+                        <div>Olivia Cooke</div>
+                        <div>Art3mis</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/tải xuống (1).jpg"/>
+                        <div>Ben Mendelsohn</div>
+                        <div>Sorrento</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/tải xuống (2).jpg"/>
+                        <div>Lena Waithe</div>
+                        <div>Aech</div>                        
+                    </div>
+                	<div class="actor-item">
+                    	<img src="../images/actors/T._J._Miller_by_Gage_Skidmore.jpg"/>
+                        <div>T.J. Miller</div>
+                        <div>I-R0k</div>                        
+                    </div>                
+                	<div class="actor-item">
+                    	<img src="../images/actors/Simon_Pegg.jpg"/>
+                        <div>Simon Pegg</div>
+                        <div>Ogden Morrow</div>                        
+                    </div>
+                    <div class="actor-item">
+                    	<img src="../images/actors/MV5BMTA1MDY3MTc2OTReQTJeQWpwZ15BbWU3MDc2MTU1NzE@._V1_UX214_CR0,0,214,317_AL_.jpg"/>
+                        <div>Mark Rylance</div>
+                        <div>Anorak</div>                        
+                    </div>
+                </div>
+                <h2>NỘI DUNG</h2>
+                <div class="summary">
+              		Ready Player One xoay quanh cuộc phiêu lưu của Wade Watts (do Tye Sheridan thủ vai). Phim lấy bối cảnh tại Columbus, Ohio năm 2045. Thế giới thực mà Wade đang sống là một nơi có sự phân hóa giàu nghèo rõ ràng. Chính vì vậy, hầu hết tất cả người dân sống tại đó, bao gồm cả Wade, đều hòa mình vào thế giới ảo mang tên OASIS.
+					<img src="../images/chi tiết/ready-player-one.jpg" alt="Nội dung Đấu trường ảo"/>                                    
+                </div>              
+                <h2>BÌNH LUẬN</h2>
+                <div class="comment">
+					<img src="../images/icon/user-2517433_960_720.png" alt="user"/>
+                	<textarea placeholder="Thêm bình luận..."></textarea>                
+                    <button>Đăng</button>
+	            </div>
+                 <button id="myBtn" title="Go to top">&Lambda;</button>
+            </div>
+            <div class="right">
+            	<div id="ranking">      	         
+                    <ul class="clearfix">          	
+                        <li>&hearts;  PHIM HOT TRONG NGÀY  &hearts;</li>
+                        <li><a href="Avg3.html">
+                            <img src="../images/movie-items/poster.thumb (4).jpg"/>
+                            <span class="movie-name">Cuộc chiến vô cực</span><br/>                    
+                            <span class="movie-view">Lượt xem: 200,069</span>
+                       </a></li> 
+                        <li><a href="BP.html">
+                            <img src="../images/movie-items/poster.thumb (7).jpg"/>                    
+                            <span class="movie-name">Báo đen</span><br/>	               
+                            <span class="movie-view">Lượt xem: 169,000</span>                
+                        </a></li>
+                        <li><a href="DP2.html">
+                            <img src="../images/movie-items/poster.thumb (3).jpg"/>                   
+                            <span class="movie-name">Deadpool 2</span><br/>                                        
+                            <span class="movie-view">Lượt xem: 125,070</span>                   
+                        </a></li>
+                        <li><a href="Rampage.html">
+                            <img src="../images/movie-items/poster.thumb.jpg"/>                    
+                            <span class="movie-name">Siêu thú cuồng nộ</span><br/>                                        
+                            <span class="movie-view">Lượt xem: 101,034</span>                
+                        </a></li>
+                        <li><a href="RP1.html">
+                            <img src="../images/movie-items/poster.thumb (2).jpg"/>        
+                            <span class="movie-name">Đấu trường ảo</span><br/>
+                            <span class="movie-view">Lượt xem: 95,002</span>                   
+                        </a></li>
+                        <li><a href="InCredible.html">
+                            <img src="../images/movie-items/poster.thumb (9).jpg"/>                 
+                            <span class="movie-name">Gia đình siêu nhân 2</span><br/>
+                            <span class="movie-view">Lượt xem: 80,086</span>                 
+                        </a></li>
+                        <li><a href="#">
+                            <img src="../images/movie-items/poster.thumb (6).jpg"/>                
+                            <span class="movie-name">Vành đai Thái Bình Dương 2</span><br/>
+                            <span class="movie-view">Lượt xem: 62,000</span>                   
+                        </a></li>
+                    </ul>
+            	</div>
+            </div>
+        </div>        
+        <div class="footer clearfix" id="footerId">
+    	<div class="footer-name"><a href="../index.html">PHIMHAY.NET</a></div>
+        <div>
+        	<ul>
+            	<li><a href="#">Hỏi đáp - Hướng dẫn</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Nguyên tắc cộng đồng</a></li>
+                <li><a href="#">Liên hệ quảng cáo</a></li>
+                <li class="bla">Copyright &copy; 2018 Phimhay.net. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

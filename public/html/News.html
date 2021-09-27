@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Tin tức | Phim HD không hay xóa web</title>
+    <link href="../Css/css-news.css" rel="stylesheet"/>
+    <link href="../images/logo/2018-07-31_20-13-43.png" rel="shortcut icon"/>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script>
+	function showPage(pageId,btn){
+		$(".body").find(".news-list").css("display","none");		
+		var p = $(document.getElementById(pageId));
+		p.css("display","block");
+		$(".body").find(".pagebtn").css("background-color","#CCC");
+		$(".body").find(".pagebtn").css("color","#000");
+		$(btn).css("background-color","red")
+		$(btn).css("color","white")
+	}
+	$(document).ready(function(){
+		// hide #back-top first
+		$("#myBtn").hide();	
+		// fade in #back-top
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#myBtn').fadeIn();
+				} else {
+					$('#myBtn').fadeOut();
+				}
+			});
+			// scroll body to 0px on click
+			$('#myBtn').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	});
+	</script>
+</head>
+
+<body>
+<div class="container">
+  		<div class="header">
+            <img src="../images/logo/256-256-d908de4ed90c0a06d45e84e6fb8cd4f6.png" />
+            <a href="../index.html">
+                PHIMHAY.NET
+            </a>
+            <div class="search">
+                <input id="searchbox" type="text" placeholder="  Tìm kiếm phim ảnh, diễn viên,..."/>
+                <a href="#"><img src="../images/icon/magnifier.png"/></a>
+            </div>
+            <div class="login">	
+                <a href="Login.html">Đăng nhập</a>
+                <a href="Sign%20up.htmlml">Đăng ký</a>
+            </div>
+        </div> 
+     	<div class="menu">
+            <ul class="clearfix">
+                <li><a href="../index.html">Trang chủ <span class="caret"></span></a></li>
+                <li class="submenu">
+                    <a href="#">Thể loại <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="Hành%20động.htmlml" target="_blank">Phim hành động</a></li>
+                        <li><a href="#">Phim viễn tưởng</a></li>
+                        <li><a href="#">Phim hài hước</a></li>
+                        <li><a href="#">Phim hoạt hình</a></li>
+                        <li><a href="#">Phim kinh dị</a></li>                    
+                        <li><a href="#">Phim tình cảm</a></li>                   
+                        <li><a href="#">Phim tâm lý</a></li>
+                        <li><a href="#">Phim tài liệu</a></li>	               	                    
+                        <li><a href="#">Phim trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim lẻ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim lẻ 2018</a></li>
+                        <li><a href="#">Phim lẻ 2017</a></li>					
+                        <li><a href="#">Phim lẻ 2016</a></li>
+                        <li><a href="#">Phim lẻ 2015</a></li>                                        
+                        <li><a href="#">Phim lẻ 2014</a></li>     
+                        <li><a href="#">Phim lẻ trước 2014</a></li>                                      
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">Phim bộ <span class="caret"></span></a>
+                    <ul class="subcontent">
+                        <li><a href="#">Phim bộ Hàn Quốc</a></li>
+                        <li><a href="#">Phim bộ Nhật Bản</a></li>
+                        <li><a href="#">Phim bộ Đài Loan</a></li>					
+                        <li><a href="#">Phim bộ Trung Quốc</a></li>                                        
+                        <li><a href="#">Phim bộ Việt Nam</a></li>                        
+                        <li><a href="#">Phim bộ Ấn Độ</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="News.html" target="_blank">Tin tức <span class="caret"></span></a></li>                                         
+                <li><a href="Anime.html">Anime <span class="caret"></span></a></li>                                         
+            </ul>
+        </div>
+	<div class="body clearfix">        	
+		<div class="slideshow-container">
+            <div class="mySlides fade">
+                <a href="#">
+                    <img src="../images/news/photo-1-15330476669871738138211.jpg"/>
+                    <div class="text">Trailer 2 của 'Venom' chính thức ra mắt, hé lộ đối thủ mang tên "Riot", khỏe hơn, to hơn cả Venom</div>
+                </a>
+            </div>                
+            <div class="mySlides fade">
+                <a href="#">
+                    <img src="../images/news/full_5.jpg"/>
+                    <div class="text">Top những bộ phim hấp dẫn nên ra rạp xem trong tháng 8 (Phần 1)</div>
+                </a>
+            </div>                
+            <div class="mySlides fade">
+                <a href="#">
+                    <img src="../images/news/photo-1-15329354644641825463513.jpg"/>
+                    <div class="text">‘Nhiệm vụ bất khả thi 6’ thu hơn 153 triệu USD sau ba ngày trình chiếu</div>
+                </a>
+            </div>
+            <div class="mySlides fade">                 
+                <a href="#"> 
+                    <img src="../images/news/deadpool2.jpg"/>
+                    <div class="text">Với ‘Avengers 3’ và ‘Deadpool 2’, phim siêu anh hùng thống trị thế giới</div>
+                </a>
+            </div>            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br/>            
+        <div style="text-align:center">
+            <span class="dot" onClick="currentSlide(1)"></span> 
+            <span class="dot" onClick="currentSlide(2)"></span> 
+            <span class="dot" onClick="currentSlide(3)"></span>
+            <span class="dot" onClick="currentSlide(4)"></span>
+        </div>
+       	<script src="../JS/Animation-JS.js"></script>           
+		<div class="news-list fade" id="page1">
+            <h2>Tin tức nổi bật</h2>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/photo-1-15330476669871738138211.jpg"/>
+                    <div class="news-info"><div class="text">Vừa rồi, hãng Sony Pictures đã chính thức tung ra<br/> trailer thứ 2 của bộ phim kể về phản anh hùng <br/> "Venom" do diễn viên Tom Hardy thủ vai.</div></div>
+                    <div class="news-title">Trailer 2 của "Venom" chính thức ra mắt, hé lộ đối thủ mang tên "Riot", khỏe hơn...</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/1D07E43295804DCDBF2E92ACB142E41D.jpeg"/>
+                    <div class="news-info"><div class="text">Khởi chiếu 27/7, “Mission: Impossible - Fallout” trở<br/>thành một trong những bộ phim có thành tích tốt<br/>nhất tại phòng vé trong sự nghiệp của Tom Cruise.</div></div>
+                    <div class="news-title">‘Nhiệm vụ bất khả thi 6’ thu hơn 153 triệu USD sau ba ngày trình chiếu</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/full_5.jpg"/>
+                    <div class="news-info"><div class="text">Tháng 8 đã đến với hàng loạt những bộ phim hay ở<br/>nhiều thể loại khác nhau, nó khiến cho các rạp<br/> phim nóng hơn bao giờ hết.</div></div>
+                    <div class="news-title">Top những bộ phim hấp dẫn nên ra rạp xem trong tháng 8 (Phần 1)</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/photo-1-1533273231524123745473.jpg"/>
+                    <div class="news-info"><div class="text">Hãy cùng điểm qua những khoảnh khắc đáng kinh<br/> ngạc trong bộ phim mới nhất của nam tài tử<br/> Tom Cruise mang tên 'Mission: Impossible – Fallout'</div></div>
+                    <div class="news-title">9 lần khán giả mê hành động được phen lác mắt trong 'Mission: Impossible 6'</div>
+                </a>
+            </div>            
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/photo-1-1532834309197735710721.jpg"/>
+                    <div class="news-info"><div class="text">Trong DC Comics, Atlanteans là một chủng tộc hư<br/>cấu của  những cư dân biển sống ở thành phố cổ<br/>đại Atlantis chìm sâu trong đại dương.</div></div>
+                    <div class="news-title">Aquaman: Tộc người Atlanteans có những điểm thú vị sẽ khiến bạn bất ngờ đấy</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/Untitled1.jpg"/>
+                    <div class="news-info"><div class="text">Sau khi tung poster chính thức đầu tiên, bom tấn<br/>"Aquaman" nhận nhiều chê bai của khán giả vì có<br/>ý tưởng giống phim hoạt hình "Finding Nemo".</div></div>
+                    <div class="news-title">Poster chính thức 'Aquaman' bị fan chế giễu vì giống 'Finding Nemo'</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/photo-2-15332018830231469954760.jpg"/>
+                    <div class="news-info"><div class="text">Qua những hình ảnh gắn bó với tuổi thơ,<br/> “Christopher Robin” sẽ gợi lên nhiều suy ngẫm <br/> về cuộc sống và tình cảm gia đình.</div></div>
+                    <div class="news-title">Hãy để gấu Pooh bé nhỏ dẫn lối các bạn về tuổi thơ trong ‘Christopher Robin’</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/thedarkestmindsmovie5kop.jpg"/>
+                    <div class="news-info"><div class="text">Tiếp nối "Maze Runner", "The Darkest Minds" là bộ<br/>phim viễn tưởng hành động mang đậm yếu tố giải<br/>trí phù hợp giới trẻ trong mùa hè này.</div></div>
+                    <div class="news-title">'The Darkest Minds' - phim khoa học viễn tưởng dành cho tuổi teen</div>
+                </a>
+            </div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/deadpool2.jpg"/>
+                    <div class="news-info"><div class="text">Thành tích phòng vé của “Avengers: Infinity War”<br/>và “Deadpool 2” cho thấy sự thống trị tuyệt đối<br/>của dòng phim siêu anh hùng trong năm 2018.</div></div>
+                    <div class="news-title">Với ‘Avengers 3’ và ‘Deadpool 2’, phim siêu anh hùng thống trị thế giới</div>
+                </a>
+        	</div>
+            
+     	</div>
+        <div class="news-list fade" id="page2">
+        	<div class="news-item">
+                <a href="#">
+                    <img src="../images/news/photo-1-1533141235774600226461.jpg"/>
+                    <div class="news-info"><div class="text">Liệu cái búng tay thần thánh thổi bay phân nửa<br/>vũ trụ của Thanos có mang lại sự cân bằng cho<br/> vũ trụ và thoát khỏi cảnh tự diệt sau này</div></div>
+                    <div class="news-title">Thanos có thực sự cứu rỗi vũ trụ hay chỉ là một gã điên cố chấp trong ‘Cuộc Chiến...</div>
+                </a>
+        	</div>
+            <div class="news-item">
+                <a href="#">
+                    <img src="../images/news/photo-1-1533119495907920271524.jpg"/>
+                    <div class="news-info"><div class="text">Ngầu dữ dội trên màn ảnh, thế nhưng Tom Cruise<br/>cũng có những khoảnh khắc hài hước và dễ <br/>thương không đỡ nổi trên màn ảnh rộng.</div></div>
+                    <div class="news-title">4 lần lầy lội đã hủy hoại hình tượng ‘Trung Niên Nghiêm Túc’ của tài tử Tom Cruise</div>
+                </a>
+        	</div>    
+        </div>
+        <div class="control">            
+            <button class="pagebtn" id="btn1" onClick="showPage('page1',this)">1</button>
+            <button class="pagebtn" id="btn2" onClick="showPage('page2',this)">2</button>          
+        </div>
+        <button id="myBtn" title="Go to top">&Lambda;</button>
+     </div>
+     <div class="footer clearfix">
+    	<div class="footer-name"><a href="../index.html">PHIMHAY.NET</a></div>
+        <div>
+        	<ul>
+            	<li><a href="#">Hỏi đáp - Hướng dẫn</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Nguyên tắc cộng đồng</a></li>
+                <li><a href="#">Liên hệ quảng cáo</a></li>
+                <li class="bla">Copyright &copy; 2018 Phimhay.net. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

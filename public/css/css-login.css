@@ -1,0 +1,277 @@
+@charset "utf-8";
+body {
+	background-image:url(../images/background/simple_blue__black_wallpaper-wallpaper-1920x1080.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right top;
+}
+a {
+	text-decoration:none;
+	color:#FFF;
+}
+div.container{
+	font-family:Arial;
+}
+.clearfix{
+	overflow:hidden;
+}
+/* CSS HEADER */
+body {
+	margin:0;
+}
+div.header {
+	height:70px;
+}
+div.header > img{
+	float:left;
+	margin:7px 0 0 7px;
+	width:55px;
+}
+div.header > a{	
+	display:inline-block;
+	font-size:36px;
+	font-family:Sansation;
+	font-weight:bold;
+	text-decoration:none;
+	color:#FFF;
+	margin: 14px;	
+	height:70px;
+	text-shadow: 2px 2px 3px #111;
+}
+div.header > div.search{
+	float:right;
+	height:30px;
+	margin:16px;	
+}
+div.header > div.search > a > img{
+	width:25px;
+	margin-top:7px;
+	margin-left:5px;
+
+}
+div.header > div.search > #searchbox {
+	width:260px;
+	height:30px;
+	border-radius:15px;
+	display:block;
+	float:left;
+	text-indent: 20px;
+}
+div.header > div.login{
+	float:right;
+	margin-top: 27px;
+	margin-right:10px;
+}
+div.header > div.login > a{
+	margin:5px;	
+	padding:10px;
+	color:#FFF;
+	text-decoration:none;
+	font-weight:bold;
+	border:1px solid #FFF;
+	border-radius:10px;
+	background:linear-gradient(#666,#000);
+}
+div.header > div.login > a:hover {
+	background:#000;
+	color:#3c6;
+}
+
+/* CSS MENU */
+ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+div.menu > ul{
+	background:linear-gradient(#111,#666,#111);
+}
+div.menu > ul > li{
+	float:left;
+	min-height:20px;
+	min-width:150px;
+	border-right:1px solid #666;
+	text-align:center;
+	font-weight:bold;
+	}
+div.menu > ul > li:last-child{
+	border:none;
+
+}
+div.menu > ul > li > a , ul.subcontent > li > a{
+	text-decoration:none;
+	color:#FFF;		
+	padding:10px 15px;
+	display:block;
+}
+div.menu > ul > li:hover{
+	background:linear-gradient(#000,#333,#000);;
+}
+div.menu > ul > li:hover > a{
+	color:#3C6;
+}
+ul.subcontent{
+	background-color:#111;
+	column-count:3;
+	border-bottom:2px solid #3C6;
+}
+ul.subcontent > li{
+	text-align:left;
+}
+ul.subcontent > li:hover > a{
+	color:#3C6;
+}
+ul.subcontent {
+	visibility:hidden;
+	position:absolute;
+	opacity:0;
+	transition:visibility 1s, opacity .5s;
+}
+li.submenu:hover ul.subcontent {
+	visibility:visible;
+	opacity:1;
+}
+/*CSS BODY*/
+div.body {
+	width:35%;
+	margin:90px auto;
+	height:300px;
+	background-color:#444;
+	box-shadow: 2px 2px 3px 0 #000;
+	border-radius:15px;
+	padding:20px;
+	color:#CCC;
+	line-height:40px;
+}
+div.body > div.title {
+	margin-top:10px;
+	text-align:center;
+	color:#FFF;
+	font-weight:bold;
+	font-size:30px;
+}
+div.body > div.acc{
+	margin:20px 60px;
+}
+div.body > div.pass{
+	margin:20px 60px;
+}
+div.body > div.acc > input{
+	width:250px;
+	height:30px;
+	margin-left:20px;
+	border-radius:5px;
+	text-indent:10px;
+	border:none;
+	background-color:#999;
+	box-shadow: 2px 2px 3px 0 #333;
+	font-size:14px;
+	color:#FFF;
+}
+div.body > div.pass > input{
+	width:250px;
+	height:30px;
+	margin-left:24px;
+	border-radius:5px;
+	text-indent:10px;
+	border:none;
+	background-color:#999;
+	box-shadow: 2px 2px 3px 0 #333;
+	font-size:14px;
+	color:#FFF;
+}
+div.body > div.pass > input::placeholder{
+		color:#EEE;
+}
+div.body > div.acc > input::placeholder{
+		color:#EEE;
+}
+div.button {
+	margin:30px 60px 20px 60px;
+}
+div.button > button:first-child {
+	background-color:#F03;
+	cursor:pointer;
+}
+div.button > button:last-child {
+	background-color:#06F;
+}
+button{
+	border-radius:5px;
+	border:none;
+	padding:10px;
+	background-color:#3C6;
+	color:#FFF;
+	margin: 0 2px;
+}
+div.forget {
+	margin-left:120px;
+}
+div.forget > a:hover{
+	color:#3C6;
+}
+button:focus{
+	outline:none;
+}
+input:focus{
+	outline:none;
+}
+button:hover{
+	opacity:0.7;
+}
+
+/*CSS FOOTER*/
+
+div.footer{
+	clear:both;
+	height:30px;
+	background-color:#333;
+	padding:30px 22px;
+	margin-top:30px;
+	border-top:solid 2px white;
+}
+div.footer > div.footer-name{
+	font-size:36px;
+	font-weight:bold;
+	font-family:Sansation;
+	color:#999;
+	padding-bottom:20px;
+	float:left;
+}	
+div.footer > div > ul {
+	padding:10px;
+}
+div.footer > div > ul li {
+	float:left;
+	color:#999;
+	padding: 0 45px 0 45px;
+}
+div.footer > div > ul > li:first-child{
+	padding-left:60px;
+}
+div.footer > div > ul > li:last-child{
+	border:none;	
+}
+div.footer > div > ul > li > a:hover{
+	color:#3c6;
+}
+li.bla{
+	margin-left:-300px;
+	font-size:13px;
+	}
+div.footer-name{
+	margin-top:-15px;
+	}
+	
+/*Ki hieu mui ten ben canh menu*/
+.caret {
+    display: inline-block;
+    width:0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+

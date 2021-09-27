@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="../images/logo/2018-07-31_20-13-43.png" rel="shortcut icon"/>
+	<title>Anime hay | Phim HD không hay xóa web</title>
+    <link href="../Css/css-hanhdong.css" rel="stylesheet"/>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script>
+		function showPage(pageId,btn){
+			$(".body").find(".movie-list").css("display","none");		
+			var p = $(document.getElementById(pageId));
+			p.css("display","block");
+			$(".body").find(".pagebtn").css("background-color","#CCC");
+			$(".body").find(".pagebtn").css("color","#000");
+			$(btn).css("background-color","red")
+			$(btn).css("color","white")
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+		}
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			var r = document.getElementById("ranking");
+			if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {				
+				r.style.position="fixed";	
+				r.style.right="46px";	
+				r.style.top="40px";	
+				r.style.width="25%";
+				r.style.opacity="1";				
+				var f = document.getElementById("footerId");
+				if (document.documentElement.scrollTop + r.offsetHeight > f.offsetTop - 70) {
+					r.style.opacity="0";
+					r.style.transition="opacity .5s";
+				} 	
+			} else{
+				r.style.position="static";
+				r.style.width="100%";
+			}
+		}
+		$(document).ready(function(){
+			// hide #back-top first
+			$("#myBtn").hide();	
+			// fade in #back-top
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('#myBtn').fadeIn();
+					} else {
+						$('#myBtn').fadeOut();
+					}
+				});
+				// scroll body to 0px on click
+				$('#myBtn').click(function () {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 800);
+					return false;
+				});
+			});
+		});
+    </script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+    	<img src="../images/logo/256-256-d908de4ed90c0a06d45e84e6fb8cd4f6.png" />
+    	<a href="../index.html">
+        	PHIMHAY.NET
+        </a>
+      	<div class="search">
+      		<input id="searchbox" type="text" placeholder="  Tìm kiếm phim ảnh, diễn viên,..."/>
+			<a href="#"><img src="../images/icon/magnifier.png"/></a>
+        </div>
+        <div class="login">	
+            <a href="Login.html" target="_blank">Đăng nhập</a>
+           	<a href="Sign%20up.htmlml" target="_blank">Đăng ký</a>
+        </div>
+   	</div> 
+    <div class="menu">
+	    <ul class="clearfix">
+        	<li><a href="../index.html">Trang chủ <span class="caret"></span></a></li>
+        	<li class="submenu">
+            	<a href="#">Thể loại <span class="caret"></span></a>
+                <ul class="subcontent">
+                	<li><a href="Hành%20động.htmlml">Phim hành động <span class="caret"></span></a></li>
+                	<li><a href="#">Phim viễn tưởng</a></li>
+               		<li><a href="#">Phim hài hước</a></li>
+                    <li><a href="#">Phim hoạt hình</a></li>
+	               	<li><a href="#">Phim kinh dị</a></li>                    
+	               	<li><a href="#">Phim tình cảm</a></li>                   
+	               	<li><a href="#">Phim tâm lý</a></li>
+	               	<li><a href="#">Phim tài liệu</a></li>	               	                    
+                    <li><a href="#">Phim trinh thám</a></li>
+            	</ul>
+            </li>
+        	<li class="submenu">
+            	<a href="#">Phim lẻ <span class="caret"></span></a>
+                <ul class="subcontent">
+                	<li><a href="#">Phim lẻ 2018</a></li>
+					<li><a href="#">Phim lẻ 2017</a></li>					
+					<li><a href="#">Phim lẻ 2016</a></li>
+					<li><a href="#">Phim lẻ 2015</a></li>                                        
+                    <li><a href="#">Phim lẻ 2014</a></li>     
+					<li><a href="#">Phim lẻ trước 2014</a></li>                                      
+                </ul>
+            </li>
+        	<li class="submenu">
+            	<a href="#">Phim bộ <span class="caret"></span></a>
+                <ul class="subcontent">
+                	<li><a href="#">Phim bộ Hàn Quốc</a></li>
+                    <li><a href="#">Phim bộ Nhật Bản</a></li>
+					<li><a href="#">Phim bộ Đài Loan</a></li>					
+					<li><a href="#">Phim bộ Trung Quốc</a></li>                                        
+                    <li><a href="#">Phim bộ Việt Nam</a></li>                        
+                    <li><a href="#">Phim bộ Ấn Độ</a></li>                        
+            	</ul>
+            </li>
+        	<li><a href="News.html">Tin tức <span class="caret"></span></a></li>                                         
+            <li><a href="Anime.html">Anime <span class="caret"></span></a></li>                                         
+        </ul>
+	</div>
+    <div class="body">
+    	<div class="filter clearfix">
+            <div>Thể loại:
+            <select>
+            	<option>Tất cả</option>
+                <option selected>Phim hành động</option>
+                <option>Phim viễn tưởng</option>
+                <option>Phim tình cảm</option>>
+                <option>Phim hài hước</option>
+                <option>Phim kinh dị</option>
+                <option>Phim tâm lý</option>
+                <option>Phim tài liệu</option>
+                <option>Phim trinh thám</option>
+            </select>
+            </div>
+            <div>Quốc gia:
+            <select>
+            	<option>Tất cả</option>
+                <option>Việt Nam</option>                
+            	<option>Mỹ</option>
+                <option>Trung Quốc</option>
+                <option>Hàn Quốc</option>>
+                <option>Nhật Bản</option>
+                <option>Thái Lan</option>    
+                <option>Ấn Độ</option>     
+            </select> 
+            </div>
+            <div>Năm phát hành:
+            <select>
+            	<option>Tất cả</option>
+            	<option>Năm 2018</option>
+                <option>Năm 2017</option>
+                <option>Năm 2016</option>>
+                <option>Năm 2015</option>
+                <option>Năm 2014</option>
+                <option>Trước 2014</option>              
+            </select>
+            </div>        
+			<div><input type="button" value="Lọc phim"/></div>
+        </div>
+        <div class="left">
+        	<h2>ANIME HAY</h2>
+            <ul class="movie-list clearfix" id="page1">
+            	<li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/0b9879d772ccb9777e8089f9d953e0b9_small.jpg" title="Boku no Hero Academia"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">17/15 tập</span>    
+                        <div class="info">
+	                        <div>BOKU NO HERO ACADEMIA 3</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+            	<li class="movie-item">
+                    <a href="#">
+                        <img src="../images/movie-items/89645.jpg" title="Persona 5 Animation"/>  
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">18/24 tập</span>                        
+                        <div class="info">
+                        	<div>PERSONA 5 ANIMATION</div>
+                            <span>23 phút</span>
+                        </div>                                                                              
+                    </a>                       
+                </li>
+                <li class="movie-item">
+                    <a href="#">
+                        <img src="../images/movie-items/95e2c47e15d5a413223e5ac4e8e8cbc0.png_small.jpg" title="Hataraku Saibou (TV)"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">05/?? tập</span>    
+                        <div class="info">
+                            <div>HATARAKU SAIBOU (TV)</div>
+                            <span>23 phút</span>
+                      	</div>                       
+                    </a>                    
+                </li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/90223-1.jpg" title="Inazuma Eleven 5"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">18/?? tập</span>    
+                        <div class="info">
+	                        <div>INAZUMA ELEVEN 5</div>
+                            <span>23 phút</span>
+	                 	</div>
+                    </a>
+               	</li>
+                 <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/1.jpg" title="Sword Art Online: Alternative GGO"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">12/12 tập</span>    
+                        <div class="info">
+	                        <div>SWORD ART ONLINE: ALTER...</div>
+                            <span>23 phút</span>
+                      	</div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/89016.jpg" title="Darling in the FranXX"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">24/24 tập</span>    
+                        <div class="info">
+	                        <div>DARLING IN THE FRANXX</div>
+                            <span>23 phút</span>
+      	                </div>
+                    </a>
+               	</li>
+                 <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/84460.jpg" title="Boruto: Naruto Next Generations"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">67/?? tập</span>    
+                        <div class="info">
+	                        <div>BORUTO: NARUTO NEXT...</div>
+                            <span>24 phút</span>
+	      	            </div>
+                    </a>
+               	</li>
+                 <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/animetvncom-mobile-suit-gundam-thunderbolt-5680054489840.jpg" title="Moblie Suit Gundam: Thunderbolt"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">04/04 tập</span>    
+                        <div class="info">
+	                        <div>MOBILE SUIT GUNDAM: THUN...</div>
+                            <span>45 phút</span>
+                       	</div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/14802384487_0fe4785aa3_o.jpg" title="Mobile Suit Gundam: Unicorn RE:0096"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">07/07 tập</span>    
+                        <div class="info">
+	                        <div>MOBILE SUIT GUNDAM: UNI...</div>
+                            <span>45 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/90821.jpg" title="Tada-kun wa Koi wo Shinai"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">13/13 tập</span>    
+                        <div class="info">
+	                        <div>TADA-KUN WA KOI WO SHINAI</div>
+                            <span>23 phút</span>
+	 	                </div>
+                    </a>
+               	</li>                
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/87290.jpg" title="Himouto! Umarun-chan R"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">12/12 tập</span>    
+                        <div class="info">
+	                        <div>HIMOUTO! UMARUN-CHAN R</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/85940.jpg" title="Blend S"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">12/12 tập</span>    
+                        <div class="info">
+	                        <div>BLEND S</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>                           
+            </ul>
+            <ul class="movie-list clearfix" id="page2">
+            	<li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/017360fd2190264d800791bbdebda077496c43a1.jpg" title="Nanatsu no Taizai: Imashime no Fukkatsu"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">24/24 tập</span>    
+                        <div class="info">
+	                        <div>NANATSU NO TAIZAI 2</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/5lGJz7I.jpg" title="Mobile Suit Gundam: AGE"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">49/49 tập</span>    
+                        <div class="info">
+	                        <div>MOBILE SUIT GUNDAM: AGE</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/shokugeki_no_soma_802483.jpg" title="Shokugeki no Souma: San no Sara"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">12/12 tập</span>    
+                        <div class="info">
+	                        <div>SHOKUGEKI NO SOUMA: SAN...</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/82071.jpg" title="Masamune-kun no Revenge"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">12/12 tập + OVA</span>    
+                        <div class="info">
+	                        <div>MASAMUNE-KUN NO REVENGE</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/201703121628024c1.jpg" title="Eromanga-sensei"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">12/12 tập</span>    
+                        <div class="info">
+	                        <div>EROMANGA-SENSEI</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/attack-on-titan-3.jpg" title="Attack on Titan 3"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">03/?? tập</span>    
+                        <div class="info">
+	                        <div>ATTACK ON TITAN SS3</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/9ZBuYpP.jpg" title="Akame ga Kill"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">24/24 tập</span>    
+                        <div class="info">
+	                        <div>AKAME GA KILL</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/poster.medium (1).jpg" title="Guilty Crown"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">22/22 tập</span>    
+                        <div class="info">
+	                        <div>GUILTY CROWN</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+                <li class="movie-item">
+                	<a href="#">
+                    	<img src="../images/movie-items/Ypovz5i.jpg" title="Inuyasha"/>
+                        <img class="play" src="../images/icon/play-btn-300x300.png"/>
+                        <span class="ribbon">193/193 tập</span>    
+                        <div class="info">
+	                        <div>INUYASHA</div>
+                            <span>23 phút</span>
+	   	                </div>
+                    </a>
+               	</li>
+			</ul>               
+            <div class="control">            
+                <button class="pagebtn" id="btn1" onClick="showPage('page1',this)">1</button>
+                <button class="pagebtn" id="btn2" onClick="showPage('page2',this)">2</button>          
+            </div>
+            <button id="myBtn" title="Go to top">&Lambda;</button>          
+        </div>
+        <div class="right">  
+        	<div id="ranking">      	         
+        	<ul class="clearfix">          	
+            	<li>&hearts;  PHIM HOT TRONG NGÀY  &hearts;</li>
+            	<li><a href="Avg3.html">
+                	<img src="../images/movie-items/poster.thumb (4).jpg"/>
+                    <span class="movie-name">Cuộc chiến vô cực</span><br/>                    
+                    <span class="movie-view">Lượt xem: 200,069</span>
+               </a></li> 
+                <li><a href="BP.html" #>
+                	<img src="../images/movie-items/poster.thumb (7).jpg"/>                    
+                    <span class="movie-name">Báo đen</span><br/>	               
+                    <span class="movie-view">Lượt xem: 169,000</span>                
+                </a></li>
+                <li><a href="DP2.html">
+                	<img src="../images/movie-items/poster.thumb (3).jpg"/>                   
+                    <span class="movie-name">Deadpool 2</span><br/>                                        
+                    <span class="movie-view">Lượt xem: 125,070</span>                   
+                </a></li>
+                <li><a href="Rampage.html">
+               		<img src="../images/movie-items/poster.thumb.jpg"/>                    
+                    <span class="movie-name">Siêu thú cuồng nộ</span><br/>                                        
+                    <span class="movie-view">Lượt xem: 101,034</span>                
+                </a></li>
+                <li><a href="RP1.html">
+                	<img src="../images/movie-items/poster.thumb (2).jpg"/>        
+                    <span class="movie-name">Đấu trường ảo</span><br/>
+                    <span class="movie-view">Lượt xem: 95,002</span>                   
+                </a></li>
+                <li><a href="InCredible.html">
+                	<img src="../images/movie-items/poster.thumb (9).jpg"/>                 
+                    <span class="movie-name">Gia đình siêu nhân 2</span><br/>
+                    <span class="movie-view">Lượt xem: 80,086</span>                 
+                </a></li>
+                <li><a href="#">
+                	<img src="../images/movie-items/poster.thumb (6).jpg"/>                
+                    <span class="movie-name">Vành đai Thái Bình Dương 2</span><br/>
+                    <span class="movie-view">Lượt xem: 62,000</span>                   
+                </a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix" id="footerId">
+    	<div class="footer-name"><a href="../index.html">PHIMHAY.NET</a></div>
+        <div>
+        	<ul>
+            	<li><a href="#">Hỏi đáp - Hướng dẫn</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Nguyên tắc cộng đồng</a></li>
+                <li><a href="#">Liên hệ quảng cáo</a></li>
+                <li class="bla">Copyright &copy; 2018 Phimhay.net. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
